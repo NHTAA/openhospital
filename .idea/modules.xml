@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/core/OH-core.iml" filepath="$PROJECT_DIR$/core/OH-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gui/OH-gui.iml" filepath="$PROJECT_DIR$/gui/OH-gui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OpenHospital.iml" filepath="$PROJECT_DIR$/OpenHospital.iml" />
+    </modules>
+  </component>
+</project>
