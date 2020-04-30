@@ -1,9 +1,9 @@
-[submodule "core"]
-	path = core
-	url = https://github.com/informatici/openhospital-core
-[submodule "gui"]
-	path = gui
-	url = https://github.com/informatici/openhospital-gui
 [submodule "doc"]
 	path = doc
 	url = https://github.com/informatici/openhospital-doc
+[submodule "core"]
+	path = core
+	url = git@github.com:lysakaleksey/openhospital-core.git
+[submodule "gui"]
+	path = gui
+	url = git@github.com:lysakaleksey/openhospital-gui.git
