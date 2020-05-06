@@ -7,6 +7,3 @@
 [submodule "gui"]
 	path = gui
 	url = git@github.com:lysakaleksey/openhospital-gui.git
-[submodule "webapi"]
-	path = webapi
-	url = git@github.com:lysakaleksey/openhospital-webapi.git

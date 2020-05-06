@@ -7,3 +7,4 @@ poh-win*
 poh-linux*
 .idea
 *.iml
+.DS_Store
