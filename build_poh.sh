@@ -32,8 +32,9 @@ done
 set -e
 
 # set the portable distribution version
-poh_win32_version="0.0.6"
-poh_linux_version="0.0.6"
+poh_win32_version="0.0.7"
+poh_linux_version="0.0.7"
+web_win64_version="0.0.7"
 
 # get the Open Hospital version
 version_file=./gui/rsc/version.properties
@@ -55,6 +56,7 @@ mysqldump --protocol tcp -h localhost -u isf -pisf123 --compatible=mysql40 oh > 
 # create distribution folders
 FULL_DIR="./OpenHospital-$version"
 WIN_DIR="./poh-win32-$poh_win32_version-core-$version"
+WEB_DIR="./web-win64-$web_win64_version-core-$version"
 LINUX32_DIR="./poh-linux-x32-$poh_linux_version-core-$version"
 LINUX64_DIR="./poh-linux-x64-$poh_linux_version-core-$version"
 mkdir -p $FULL_DIR/doc
@@ -62,6 +64,8 @@ mkdir -p $FULL_DIR/mysql
 mkdir -p $WIN_DIR/oh/doc
 mkdir -p $LINUX32_DIR/oh/doc
 mkdir -p $LINUX64_DIR/oh/doc
+mkdir -p $WEB_DIR/doc
+mkdir -p $WEB_DIR/mysql
 
 # compile and assemble documentation
 if command_exists asciidoctor-pdf; then
@@ -121,9 +125,16 @@ cp POH-linux-changelog.md $LINUX64_DIR
 cp LICENSE $LINUX64_DIR
 cp CHANGELOG $LINUX64_DIR
 
+echo 'Assemble OH Windows x64 web ...'
+cp -rf ./web-bundle-winx64/* $WEB_DIR
+cp -rf ./core/mysql/db/* $WEB_DIR/mysql
+cp -rf ./web/target/OHWeb/* $WEB_DIR
+cp *.pdf $WEB_DIR/doc
+
 echo 'Package...'
 zip -r $FULL_DIR.zip $FULL_DIR
 zip -r $WIN_DIR.zip $WIN_DIR
+zip -r $WEB_DIR.zip $WEB_DIR
 tar -cvzf $LINUX32_DIR.tar.gz $LINUX32_DIR
 tar -cvzf $LINUX64_DIR.tar.gz $LINUX64_DIR
 mkdir release-files
@@ -139,6 +150,6 @@ echo $checksum
 sed -i "s/CHECKSUM/$checksum/g" CHANGELOG.md
 
 # clean up
-rm -rf $FULL_DIR $WIN_DIR $LINUX32_DIR $LINUX64_DIR *.sql *.txt
+rm -rf $FULL_DIR $WIN_DIR $WEB_DIR $LINUX32_DIR $LINUX64_DIR CHANGELOG *.sql *.txt *.zip *.gz *.pdf
 
 echo "Full and portable distributions of Open Hospital created successfully."
