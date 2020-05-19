@@ -1,29 +1,16 @@
-OpenHospital vVERSION
+OpenHospital v2.0.1
 ------------------------------
 
-Changelog vVERSION:
-- Completely refactored code: Spring + Maven + JUnit + JPA for better performances and as a stepping stone to the upcoming web-based version
-- New! Search fields for diagnosis in OPD and Admission
-- New! Search fields for pharmaceuticals in Pharmacy Stock
-- New! Movements between Wards available
-- New! Multiple Operations in Admission and available in Clinical Sheet
-- New! Search fields for Exams in Laboratory
-- New! Online documentation in portable format Asciidoctor (available at [openhospital-doc](http://github.com/informatici/openhospital-doc))
-- (fix) Fixed startup when connectivity is not available
-- (fix) Fixed step_57 file name
-- (fix) OP-126 List box problem in Examination module
-- (fix) OP-167, OP-168, OP-160, OP-140, OP-183, OP-174, OP-158, OP-182
-- (fix) Some minor fixes
+Changelog v2.0.1:
+- New! BsUnit, Temp Unit forms
+- New! Patient Presentation
+- New! Web API to import patients & Presentation 
 
-Brought to you by:
-- Informatici Senza Frontiere opensource community
-- Uni2grow Camerun
-- Intesys s.r.l.
-
-**Languages**: French, Italian, English, Portuguese, Swahili, German, Spanish, Arabic
-*Brought to you by Transifex community*
 
 SHA256 checksum:
 ```
-CHECKSUM
+4b6c2087e301014ee69285193309f59061b8107c1363aafb5059a5a542a4266d  OpenHospital-2.0.1.zip
+1f28b670f00d7c207636dd957297faf7dde78a75ea05ccfecaabc16635f1bac5  poh-win32-0.0.6-core-2.0.1.zip
+8a6d389af58bd0bac25e40c72178499f9a9e86c1e167eafe7acf768474995bec  poh-linux-x32-0.0.6-core-2.0.1.tar.gz
+bbb482921df4b05c9cab51414d83a74f199cde87424fa51137d7743bb2e5975d  poh-linux-x64-0.0.6-core-2.0.1.tar.gz
 ```

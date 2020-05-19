@@ -1,0 +1,10 @@
+<service>
+    <id>OHWeb</id>
+    <name>OH Web Service</name>
+    <depend>MySQL</depend>
+    <description>OH Web Service</description>
+    <executable>java</executable>
+    <workingdirectory>C:\Programs\OHWeb</workingdirectory>
+    <arguments>-Xmx512m -jar OH-web.jar --spring.config.location=rsc/application.properties</arguments>
+    <logmode>rotate</logmode>
+</service>
