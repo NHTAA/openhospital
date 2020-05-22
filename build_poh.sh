@@ -71,10 +71,12 @@ mkdir -p $WEB_DIR/mysql
 if command_exists asciidoctor-pdf; then
     asciidoctor-pdf ./doc/doc_admin/AdminManual.adoc -o AdminManual.pdf
     asciidoctor-pdf ./doc/doc_user/UserManual.adoc -o UserManual.pdf
+    asciidoctor-pdf ./web/README.adoc -o $WEB_DIR/doc/README.pdf
     cp *.pdf $FULL_DIR/doc
     cp *.pdf $WIN_DIR/oh/doc
     cp *.pdf $LINUX32_DIR/oh/doc
     cp *.pdf $LINUX64_DIR/oh/doc
+    cp *.pdf $WEB_DIR/doc
 else show_doc;
 fi
 
@@ -129,7 +131,6 @@ echo 'Assemble OH Windows x64 web ...'
 cp -rf ./web-bundle-winx64/* $WEB_DIR
 cp -rf ./core/mysql/db/* $WEB_DIR/mysql
 cp -rf ./web/target/OHWeb/* $WEB_DIR
-cp *.pdf $WEB_DIR/doc
 
 echo 'Package...'
 zip -r $FULL_DIR.zip $FULL_DIR
