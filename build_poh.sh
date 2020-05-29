@@ -71,7 +71,7 @@ mkdir -p $WEB_DIR/mysql
 if command_exists asciidoctor-pdf; then
     asciidoctor-pdf ./doc/doc_admin/AdminManual.adoc -o AdminManual.pdf
     asciidoctor-pdf ./doc/doc_user/UserManual.adoc -o UserManual.pdf
-    asciidoctor-pdf ./web/README.adoc -o $WEB_DIR/doc/README.pdf
+    asciidoctor-pdf ./web/README.adoc -o $WEB_DIR/doc/WebApiAdmin.pdf
     cp *.pdf $FULL_DIR/doc
     cp *.pdf $WIN_DIR/oh/doc
     cp *.pdf $LINUX32_DIR/oh/doc
