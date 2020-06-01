@@ -1,0 +1,3 @@
+[submodule "core"]
+	path = openhospital-core
+	url = git@github.com:NHTAA/openhospital-core.git
